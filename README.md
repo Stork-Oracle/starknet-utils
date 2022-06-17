@@ -1,6 +1,6 @@
 # Utilities for Starknet
 ## Felt Packing
-Until further optimizations are implemented, storage on StarkNet is expensive see [this excellent analysis](https://hackmd.io/@RoboTeddy/BJZFu56wF) to learn more. A reasonable way to work around this is to refund fees paid for reused storage between L1 updates. But alas, this isn't the case today.
+Until further optimizations are implemented, storage on StarkNet is still expensive. You can read [this excellent analysis](https://hackmd.io/@RoboTeddy/BJZFu56wF) to learn more. A reasonable way to "work around this" in the future is to refund fees paid for reused storage between L1 updates, since it will not incur L1 fees. But alas, this isn't the case today.
 
 In the interim, felts can safely fit 252 bits, which is a fair amount of data (e.g. 7 32-bit ints, 31 ASCII characeters, etc).
 
