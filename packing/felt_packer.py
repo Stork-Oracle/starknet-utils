@@ -49,7 +49,7 @@ if __name__ == '__main__':
     # --------------------------------------------------------------------------------- #
     ''')
     schema = [('timestamp', 32), ('price', 32), ('oracle', 80)]
-    price = int(12303.01*10**2)
+    price = int(12303.01*10**2) # not using all 32 bits; just an example.
     oracle = int('Stork'.encode('ascii').hex(),16)
     
     entries = {

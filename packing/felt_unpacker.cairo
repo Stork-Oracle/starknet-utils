@@ -9,12 +9,12 @@ from starkware.cairo.common.pow import pow
 # Returns an array of felts that were packed into packed_felt
 #
 # See corresponding python script to pack
-# For example: 8594493568283152773212111322199588026419403 3 80 32 32
+# For example: 8594493568284625242442550301055646065193579 3 80 32 32
 # Note that the order of elements is inverted compared to the Python script (LSB -> MSB)
 # i.e. in python, you would pass 32, 32, 80
 # Or use https://github.com/gaetbout/starknet-array-manipulation to flip the array
 
-# Sample Use (matches Python example): nile call CONTRACT unpack_felt 8594493568283152773212111322199588026419403 3 80 32 32
+# Sample Use (matches Python example): nile call CONTRACT unpack_felt 8594493568284625242442550301055646065193579 3 80 32 32
 @view
 func unpack_felt{syscall_ptr : felt*,pedersen_ptr : HashBuiltin*, bitwise_ptr : BitwiseBuiltin*, range_check_ptr}(
     packed_felt: felt, schema_len: felt, schema: felt*) -> (values_len: felt, values: felt*

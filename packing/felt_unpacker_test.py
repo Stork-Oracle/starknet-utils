@@ -20,7 +20,7 @@ async def test_unpack():
         source=CONTRACT_FILE,
     )
 
-    execution_info = await contract.unpack_felt(packed_felt=8594493568283152773212111322199588026419403, schema=[80,32,32]).call()
+    execution_info = await contract.unpack_felt(packed_felt=8594493568284625242442550301055646065193579, schema=[80,32,32]).call()
 
     print(execution_info.result)
-    assert execution_info.result == ([1655239252, 12303, 249834169927883],)
+    assert execution_info.result == ([1655239252, 1230301, 358435746411],)
