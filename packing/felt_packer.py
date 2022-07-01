@@ -9,12 +9,12 @@ def pack(entries, schema):
     Schema must fit in under 250 bits
     """
     # ensure data fits in felt
-    assert sum(map(lambda x: x[1], schema)) <= 250
+    assert sum(map(lambda x: x[1], schema)) <= 250, 'Schema exceeds 250 bits'
     packed = 0
     for i in range(len(schema)):
         key, size = schema[i]
         entry = entries[key]
-        assert 0 <= entry <= 2**size
+        assert 0 <= entry <= 2**size, f'{key} value {entry} ({math.ceil(math.log2(entry))} bits) exceeds {size} bits'
         
         if (i > 0):
             packed *= 2**size # note: can bitshift instead, e.g. packed << size
